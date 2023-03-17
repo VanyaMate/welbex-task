@@ -1,0 +1,145 @@
+@import "src/consts/sizes";
+@import "src/consts/dark-theme-colors";
+
+.container {
+    display: flex;
+    padding: 0 0 20px 0;
+    transition: .5s;
+    background: transparent;
+    justify-content: space-between;
+
+    @media screen and (max-width: $m_550) {
+        flex-direction: column;
+    }
+
+
+    .nav {
+        display: flex;
+
+        @media screen and (max-width: $m_680) {
+            flex-direction: column;
+        }
+
+        & > * {
+            margin-left: 100px;
+            transition: .5s;
+
+            @media screen and (max-width: $m_1200) {
+                margin-left: 50px;
+            }
+
+            @media screen and (max-width: $m_1000) {
+                margin-left: 25px;
+            }
+
+            @media screen and (max-width: $m_680) {
+                margin-left: 0;
+                margin-top: 30px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+
+                @media screen and (max-width: $m_680) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .column {
+            margin-right: 50px;
+            transition: .5s;
+
+            @media screen and (max-width: $m_1200) {
+                margin-right: 25px;
+            }
+
+            @media screen and (max-width: $m_550) {
+                margin-right: 50px;
+            }
+
+            & > * {
+                transition: .5s;
+                font-size: 16px;
+                font-weight: 400;
+
+                @media screen and (max-width: $m_1200) {
+                    font-size: 15px;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .contacts {
+        text-align: right;
+        transition: .5s;
+
+        @media screen and (max-width: $m_1200) {
+            max-width: 240px;
+        }
+
+        @media screen and (max-width: $m_680) {
+            max-width: 200px;
+        }
+
+        @media screen and (max-width: $m_550) {
+            max-width: 100%;
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        &_rows {
+            & > * {
+                margin-top: 22px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .social {
+            & > * {
+                margin-right: 14px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .address {
+            font-size: 16px;
+            line-height: 19.36px;
+            font-weight: 400;
+            transition: .5s;
+
+            @media screen and (max-width: $m_550) {
+                font-size: 14px;
+                line-height: 16.94px;
+                font-weight: 400;
+            }
+        }
+
+        .rights {
+            margin-top: 70px;
+            font-size: 12px;
+            line-height: 14.63px;
+            font-weight: 400;
+            transition: .5s;
+
+            @media screen and (max-width: $m_550) {
+                margin-top: 50px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: $m_550) {
+        padding: 40px 15px 60px;
+        background: $darkBlack;
+    }
+}

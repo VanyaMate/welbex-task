@@ -1,0 +1,14 @@
+@import "src/consts/sizes";
+
+.container {
+    padding: 50px 0;
+    transition: .5s;
+
+    @media screen and (max-width: $m_800) {
+        padding: 25px 0;
+    }
+
+    @media screen and (max-width: $m_550) {
+        padding: 25px 15px;
+    }
+}

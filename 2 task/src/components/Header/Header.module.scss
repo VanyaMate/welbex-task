@@ -1,0 +1,67 @@
+@import "src/consts/dark-theme-colors";
+@import "src/consts/sizes";
+
+
+.headerFixStatic {
+    position: relative;
+    height: 74px;
+    transition: .5s;
+
+    @media screen and (max-width: $m_550) {
+        height: 92px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        transition: .5s;
+        background: transparent;
+        position: absolute;
+        width: 100%;
+
+        @media screen and (max-width: $m_550) {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            margin-top: 0;
+            padding: 50px 15px 20px;
+            background: $darkBlack;
+        }
+
+        .menu {
+            display: flex;
+
+            @media screen and (max-width: $m_550) {
+                width: 100%;
+            }
+
+            & > * {
+                margin-right: 50px;
+                transition: .5s;
+
+                @media screen and (max-width: $m_1000) {
+                    margin-right: 40px;
+                }
+
+                @media screen and (max-width: $m_800) {
+                    margin-right: 30px;
+                }
+
+                @media screen and (max-width: $m_550) {
+                    margin-right: 20px;
+                }
+
+                @media screen and (max-width: $m_680) {
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

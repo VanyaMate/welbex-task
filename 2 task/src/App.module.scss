@@ -1,0 +1,33 @@
+@import "src/consts/sizes";
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    background: #0E1014;
+
+    display: flex;
+    justify-content: center;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 100%;
+        min-height: 100vh;
+        max-width: $contentWidth;
+        margin: 0 20px;
+        z-index: 10;
+        transition: .5s;
+
+        .top {
+
+        }
+
+        @media screen and (max-width: $m_550) {
+            margin: 0;
+        }
+    }
+}

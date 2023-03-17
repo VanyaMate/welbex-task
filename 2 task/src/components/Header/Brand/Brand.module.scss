@@ -1,0 +1,69 @@
+@import "src/consts/sizes";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 140px;
+    transition: .5s;
+
+    @media screen and (max-width: $m_800) {
+        width: 97px;
+
+        .name {
+            width: 97px;
+            transition: .5s;
+        }
+    }
+
+    @media screen and (max-width: $m_680) {
+        margin-top: -60px;
+        transform: translateX(70px);
+        width: 0;
+    }
+
+
+    .logo {
+        margin-right: 8px;
+        width: 35px;
+        transition: .2s;
+
+        @media screen and (max-width: $m_800) {
+            margin-right: 0;
+            width: 0;
+        }
+
+        @media screen and (max-width: $m_680) {
+            margin-right: 8px;
+            width: 35px;
+        }
+    }
+
+    .nameContainer {
+        display: flex;
+        align-items: center;
+        transition: .5s;
+        width: 97px;
+
+        .name {
+            width: 97px;
+            transition: .5s;
+        }
+    }
+
+    .desc {
+        position: absolute;
+        top: calc(100% + 10px);
+        font-size: 10px;
+        line-height: 12.19px;
+        font-weight: 300;
+        height: 25px;
+        overflow: hidden;
+        transition: .2s;
+
+        @media screen and (max-width: $m_800) {
+            height: 0;
+        }
+    }
+}

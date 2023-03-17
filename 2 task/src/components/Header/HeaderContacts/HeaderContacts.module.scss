@@ -1,0 +1,55 @@
+@import "src/consts/sizes";
+
+.container {
+    display: flex;
+    align-items: center;
+
+    .number {
+        overflow: hidden;
+        transition: .5s;
+        width: 142px;
+        white-space: nowrap;
+
+        @media screen and (max-width: $m_1000) {
+            width: 0;
+        }
+    }
+
+    .links {
+        margin-top: 2px;
+        margin-left: 50px;
+        white-space: nowrap;
+        transform: translateX(0) translateY(0);
+        transition: .5s;
+
+        @media screen and (max-width: $m_1000) {
+            margin-left: 20px;
+            width: 120px;
+        }
+
+        @media screen and (max-width: $m_800) {
+            width: 85px;
+        }
+
+        @media screen and (max-width: $m_550) {
+            margin-left: 0;
+            width: 0;
+            transform: translateX(-85px) translateY(-30px);
+        }
+
+        & > * {
+            display: inline-block;
+            margin-left: 30px;
+            transition: .2s;
+            width: 20px;
+
+            @media screen and (max-width: $m_800) {
+                margin-left: 15px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

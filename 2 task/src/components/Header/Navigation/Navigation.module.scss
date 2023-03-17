@@ -1,0 +1,55 @@
+@import "src/consts/sizes";
+
+.container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $m_550) {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .link {
+        margin-right: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: .5s;
+
+        @media screen and (max-width: $m_1400) {
+            margin-right: 25px;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: $m_1200) {
+            margin-right: 22px;
+            font-size: 14px;
+
+        }
+
+        @media screen and (max-width: $m_800) {
+            margin-right: 18px;
+            font-size: 13px;
+
+        }
+
+        @media screen and (max-width: $m_550) {
+            margin-right: 16px;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: $m_390) {
+            &:nth-last-child(2) {
+                margin-right: 0;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            @media screen and (max-width: $m_390) {
+                display: none;
+            }
+        }
+    }
+}

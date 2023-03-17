@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin-top: 10px;
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+    }
+}
