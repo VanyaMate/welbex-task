@@ -1,4 +1,64 @@
 .container {
     width: 100%;
     overflow: hidden;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+        .generalText {
+
+        }
+
+        .desc {
+            font-weight: 400;
+            font-size: 18px;
+            width: 275px;
+            margin-top: 30px;
+            line-height: 21.94px;
+        }
+    }
+
+    .consultation {
+        text-align: right;
+        margin-top: 14px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        .title {
+            line-height: 21.78px;
+            font-weight: 900;
+            text-transform: uppercase;
+            width: 275px;
+            margin-bottom: 40px;
+            background: linear-gradient(90deg, #FCB045 20%, #FD1D1D 100%);
+            -webkit-background-clip: text;
+            color: rgba(0, 0, 0, .2);
+
+            span {
+                text-transform: none;
+                font-weight: 500;
+            }
+        }
+
+        .row {
+            display: flex;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .col {
+                width: 135px;
+                margin-right: 30px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }

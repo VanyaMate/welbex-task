@@ -1,10 +1,13 @@
 import React from 'react';
 import GradientText from "../../UI/Text/GradientText/GradientText";
 import css from './GeneralText.module.scss';
+import {IDefaultComponent} from "../../IDefaultComponent";
 
-const GeneralText = () => {
+const GeneralText = (props: IDefaultComponent) => {
+    const { className, ...other } = props;
+
     return (
-        <div className={css.text}>
+        <div className={[css.text, className ?? ''].join(' ')} {...other}>
             Зарабатывайте<br/>больше<br/>
             <GradientText
                 className={css.gradient}
