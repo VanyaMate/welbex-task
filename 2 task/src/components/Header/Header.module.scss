@@ -6,6 +6,7 @@
     position: relative;
     height: 74px;
     transition: .5s;
+    z-index: 99;
 
     @media screen and (max-width: $m_550) {
         height: 92px;
