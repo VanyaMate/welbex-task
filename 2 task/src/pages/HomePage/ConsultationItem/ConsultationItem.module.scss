@@ -1,14 +1,56 @@
-.title {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
+@import "src/consts/sizes";
+
+.desktop {
+    @media screen and (max-width: $m_610) {
+        display: none;
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        transition: .5s;
+
+        @media screen and (max-width: $m_800) {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    .message {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        transition: .5s;
+
+        @media screen and (max-width: $m_800) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
 }
 
-.message {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+.mobile {
+    position: relative;
+    padding-left: 15px;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    @media screen and (min-width: calc(#{$m_610} + 1px)) {
+        display: none;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 1px;
+        background: linear-gradient(90deg, #FCB045 20%, #FD1D1D 100%);
+    }
 }

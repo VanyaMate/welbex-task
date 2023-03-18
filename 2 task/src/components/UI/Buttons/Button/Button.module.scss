@@ -1,0 +1,32 @@
+// Лучше бы все значения брать из "библиотеки" но.. да..
+
+.button {
+    padding: 5px;
+    pointer-events: none;
+    border: none;
+    outline: none;
+    background: #0E1014;
+    color: #E4E5EA;
+    transition: .1s;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &.active {
+        pointer-events: auto;
+
+        &:hover {
+            background: #FCB045;
+            color: #0E1014;
+        }
+    }
+
+    &.always {
+        pointer-events: auto;
+        background: #FCB045;
+        color: #222;
+
+        &:hover {
+            color: #0E1014;
+        }
+    }
+}

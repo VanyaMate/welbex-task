@@ -1,11 +1,29 @@
 @import "src/consts/dark-theme-colors";
 
+$scrollWidth: 4;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: $white;
     font-family: Inter;
+
+    &::-webkit-scrollbar {
+        position: absolute;
+        width: #{$scrollWidth}px;
+        height: #{$scrollWidth}px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $darkBlack;
+        border-radius: calc(#{$scrollWidth}px / 2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $blue;
+        border-radius: calc(#{$scrollWidth}px / 2);
+    }
 }
 
 a {
